@@ -17,10 +17,33 @@ class UserController extends Controller
     }
     public function show($params)
     {
-        $user = ($this->users [$params['id']]);
-        echo implode(' - ', $user);
+        //$user = ($this->users [$params['id']]);
+        //echo implode(' - ', $user);
 
-        // OR var_dump($this->users [$params['id']);
+        var_dump($this->users[$params['id']]);
+    }
+    public function info($params)
+    {
+        $id = $params['id'];
+        $key = $params['key'];
+        $user = $this->users[$id][$key];
+        //echo implode('-', $user);
+        var_dump($user);
+
+    }
+    public function all()
+    {
+        var_dump($this->users);
+    }
+    public function first($params)
+    {
+        $user = $this->users;
+        $n = $params['n'];
+        for ($i = 1; $i <= $n; $i++) {
+            $result = array_shift($user);
+            var_dump($result);
+        }
+
     }
 
 }
