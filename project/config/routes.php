@@ -10,6 +10,7 @@
         new Route('/user/:id/', 'user', 'show'),
         new Route('/user/:id/:key/', 'user', 'info'),
         new Route('/userAll/', 'user', 'all'),
-        new Route('/userFirst/:n/', 'user', 'first')
+        new Route('/userFirst/:n/', 'user', 'first'),
+        new Route('/project/views/page/act.php/', 'page', 'act')
 	];
 	
