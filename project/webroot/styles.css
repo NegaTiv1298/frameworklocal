@@ -1,0 +1,12 @@
+p {
+    color: gold;
+}
+h1 {
+    width: 300px;
+    height: 100px;
+    color: aqua;
+    font-weight: bold;
+}
+header {
+    color: aqua;
+}

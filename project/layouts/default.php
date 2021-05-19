@@ -1,10 +1,29 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title></title>
-	</head>
-	<body>
-		<?= $content ?>
-	</body>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/project/webroot/styles.css">
+    <img src="/project/webroot/smile.png">
+    <title>Заголовок</title>
+<!--    --><?//= $title ?>
+</head>
+<body>
+<header>
+    хедер сайта
+</header>
+<div class="container">
+    <aside class="sidebar left">
+        левый сайдбар
+    </aside>
+    <main>
+        <?= $content ?>
+    </main>
+    <aside class="sidebar right">
+        правый сайдбар
+    </aside>
+</div>
+<footer>
+    футер сайта
+</footer>
+</body>
 </html>
