@@ -11,7 +11,7 @@
         new Route('/user/:id/:key/', 'user', 'info'),
         new Route('/userAll/', 'user', 'all'),
         new Route('/userFirst/:n/', 'user', 'first'),
-        new Route('/project/views/page/act.php/', 'page', 'act'),
+        new Route('/page/test/', 'page', 'test'),
         new Route('/product/:id/', 'product', 'show'),
         new Route('/productAll/', 'product', 'all')
 	];

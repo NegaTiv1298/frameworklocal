@@ -43,6 +43,7 @@ class ProductController extends Controller
     }
     public function show($param)
     {
+        $this->title = 'Действие show контроллера Product';
         $id = $param['id'];
         var_dump($this->products[$param['id']]);
 
@@ -50,16 +51,14 @@ class ProductController extends Controller
         $price = $this->products[$id]['price'];
         $quantity = $this->products[$id]['quantity'];
         $category = $this->products[$id]['category'];
-        ?>
 
-        <h1>Продукт "<?php echo $name ?>" из категории "<?php echo $category ?>"</h1>
-<p>
-    Цена: <?php echo $price ?>, количество: <?php echo $quantity ?>
-    </p>
-<p>
-    Стоимость (цена * количество): <?php echo ($price * $quantity) ?>
-</p>
-<?php
+
+        return $this->render('page/show', [
+                'name' => $name,
+            'category' => $category,
+            'price' => $price,
+            'quantity' => $quantity
+        ]);
     }
 
     public function all()
@@ -67,4 +66,7 @@ class ProductController extends Controller
         var_dump($this->products);
     }
 }
+
+
+
 

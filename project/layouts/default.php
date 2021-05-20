@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="/project/webroot/styles.css">
     <img src="/project/webroot/smile.png">
-    <title>Заголовок</title>
-<!--    --><?//= $title ?>
+    <title><?= $title ?></title>
 </head>
 <body>
 <header>
