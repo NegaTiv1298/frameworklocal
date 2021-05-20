@@ -5,14 +5,27 @@ use \Project\Models\Page;
 
 class PageController extends Controller
 {
-    public function show1()
+    private $pages;
+    public function __construct()
     {
-        echo '1';
+        $this->pages = [
+            1 => ['title'=>'страница 1', 'text'=>'текст страницы 1'],
+            2 => ['title'=>'страница 2', 'text'=>'текст страницы 2'],
+            3 => ['title'=>'страница 3', 'text'=>'текст страницы 3'],
+        ];
     }
-    public function show2()
+    public function show($param)
     {
-        echo '2';
+        $id = $this->pages[$param['id']];
+        $pageTitle = $id['title'];
+        $text = $id['text'];
+        $this->title = $pageTitle;
+        return $this->render('page/show', [
+            'text' => $text
+        ]);
+
     }
+
     public function act()
     {
         return $this->render('page/act', [

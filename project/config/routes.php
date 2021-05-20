@@ -12,6 +12,7 @@
         new Route('/userAll/', 'user', 'all'),
         new Route('/userFirst/:n/', 'user', 'first'),
         new Route('/page/test/', 'page', 'test'),
+        new Route('/pageShow/:id', 'page', 'show'),
         new Route('/product/:id/', 'product', 'show'),
         new Route('/productAll/', 'product', 'all')
 	];
